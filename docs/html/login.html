@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style_login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="logo-menu">
+            <img src="../assets/img/logo_cbn_branco.png" class="img-logo" alt="logo-rightoffer">
+        </div>
+        <ul class="btn-container">
+            <li class="btn-cadastro"><a href="#">FAQ</a></li>
+            <li class="btn-cadastro"><a href="https://www.cbnco.com.br/" target="_blank">Nosso site</a></li>
+            <li class="btn-cadastro"><a href="#">Atualizações</a></li>
+        </ul>
+    </div>
+    <div class="main-login">
+        <div class=" left-login">
+            <h1 class="left-login-h1">Faça login,<br>Gerencie processos</h1>
+            <h1 class="left-login-h1">Etapa de autenticação,<br>Cuidando da sua segurança</h1>
+            <img src="../assets/img/bi_animation.svg" class="left-login-img" alt="animação da tela de login">
+            <img src="../Animations/2FA.svg" class="left-login-img" alt="animação da tela para autenticação">
+        </div>
+        <form action="">
+            <div class="right-login">
+                <div class="card-login">
+                    <h1>LOGIN</h1>
+                    <div class="textfield">
+                        <label for="usuario">Usuário</label>
+                        <input type="text" name="Usuário" id="Usuario" placeholder="Usuário">
+                    </div>
+                    <div class="textfield">
+                        <label for="Senha">Senha</label>
+                        <input type="password" name="Senha" id="Senha" placeholder="Senha">
+                    </div>
+                    <input class="btn-login" type="button" id="btn-login" value="Entrar" onclick="validar_entrada_login()">
+                </div>
+                <div class="two-factor-box">
+                    <h1>Insira o código de autenticação...</h1>
+                    <div class="textfield">
+                        <label for="código">Código</label>
+                        <input type="text" name="Codigo-2FA" placeholder="Código">
+                    </div>
+                    <input class="btn-login" type="button" id="btn-login" value="Verificar" onclick="verificar_email()">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="../assets/js/login.js"></script>
+</body>
+</html>
