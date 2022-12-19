@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head onload="plotar()">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_dash.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Dasboard</title>
+</head>
+<body>
+    <main class="main-dash">
+        <header class="header">
+            <div class="header-logo">
+                <img src="logo_cbn_branco.png" alt="logo-cbn-branco">
+            </div>
+            <div class="header-cards">
+                <div class="cards">
+                    <div class="header-card">Total de contratos</div>
+                        <H1 id="Total_contratos">240</H1>
+                    </div>
+                <div class="cards">
+                    <div class="header-card">Qtde contratos faturados</div>
+                    <h1 id="Contratos_faturados">210</h1>
+                </div>
+                <div class="cards">
+                    <div class="header-card">Qtde contratos não faturados</div>
+                    <h1 id="Contartos_nao_faturados">30</h1>
+                </div>
+                <img src="foto de perfil.jpg" class="img-usuario" alt="foto de perfil">
+            </div>
+        </header>
+        <div class="dash-body">
+            <div class="menu-bar-left">
+                <div class="filter-card-periodo">
+                    <div class="header-filter-card">Período</div>
+                    <div class="body-filter-card">
+                        <label for="data-de">De</label>
+                        <input type="date">
+                        <label for="data-ate">Até</label>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="filter-card-responsavel">
+                    <div class="header-filter-card">Responsável</div>
+                    <div class="body-filter-card">
+                        <label for="responsável">Nome</label>
+                        <select name="cars">
+                            <option value="Todos">Todos</option>
+                            <option value="Renata">Renata</option>
+                            <option value="Vanessa">Vanessa</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="filter-card-seguradora">
+                    <div class="header-filter-card">Seguradora</div>
+                    <div class="body-filter-card">
+                        <label for="usuario">De</label>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="img-astronalta">
+                    <img src="ASTRO. - FOGUETE.png" alt="astronalta no foquete">
+                </div>
+            </div>
+            <div class="dash-body-graphics">
+                    <div class="grafico" id="grafico-01"></div>
+                    <div class="grafico" id="grafico-02"></div>     
+                    <div class="grafico" id="grafico-03"></div>
+                    <div class="grafico" id="grafico-04"></div>
+            </div>
+        </div>
+    </main>
+    <script>
+            var data = [
+                {
+                    x: ['Carro A', 'Carro B'],
+                    Y: ['10', '10']
+                }
+            ]; Plotly.newPlot('grafico-01', data)
+    </script>
+</body>
+</html>
